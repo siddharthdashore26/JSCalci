@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Basic Calculator</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script>
+function myFunction() {
+    document.getElementById("demo").style.color = "red";
+}
+</script>
+</head>
+<br>
+<form name="calc">
+<center>
+<input type="text" name="output"/><br><br>
+
+<input type="button" value="7" OnClick="calc.output.value+='7'"/>
+<input type="button" value="8" OnClick="calc.output.value+='8'"/>
+<input type="button" value="9" OnClick="calc.output.value+='9'"/><br>
+<input type="button" value="4" OnClick="calc.output.value+='4'"/>
+<input type="button" value="5" OnClick="calc.output.value+='5'"/>
+<input type="button" value="6" OnClick="calc.output.value+='6'"/><br>
+<input type="button" value="1" OnClick="calc.output.value+='1'"/>
+<input type="button" value="2" OnClick="calc.output.value+='2'"/>
+<input type="button" value="3" OnClick="calc.output.value+='3'"/><br><br>
+
+<input type="button" value="C" OnClick="calc.output.value=''"/>
+
+<input type="button" value="+" OnClick="calc.output.value+='+'"/>
+<input type="button" value="-" OnClick="calc.output.value+='-'"/>
+<input type="button" value="*" OnClick="calc.output.value+='*'"/>
+<input type="button" value="/" OnClick="calc.output.value+='/'"/>
+
+<input type="button" value="=" OnClick="calc.output.value+=' = '+eval(calc.output.value)"/>
+</center>
+
+</form>
+
+
+</html>
