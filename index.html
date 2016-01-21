@@ -1,27 +1,12 @@
 <html>
 <head>
 <title>Basic Calculator</title>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.min.js"></script>
-<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-<script>
-function myFunction() {
-    document.getElementById("demo").style.color = "red";
-}
-</script>
+<script src="calci.js"></script>
 </head>
 <br>
-<form name="calc">
+<form name="calc" role="form">
 <center>
+<h2>Using eval() function</h2>
 <input type="text" name="output"/><br><br>
 
 <input type="button" value="7" OnClick="calc.output.value+='7'"/>
@@ -34,14 +19,42 @@ function myFunction() {
 <input type="button" value="2" OnClick="calc.output.value+='2'"/>
 <input type="button" value="3" OnClick="calc.output.value+='3'"/><br><br>
 
+<input type="button" value="0" OnClick="calc.output.value+='0'"/>
 <input type="button" value="C" OnClick="calc.output.value=''"/>
-
 <input type="button" value="+" OnClick="calc.output.value+='+'"/>
 <input type="button" value="-" OnClick="calc.output.value+='-'"/>
 <input type="button" value="*" OnClick="calc.output.value+='*'"/>
 <input type="button" value="/" OnClick="calc.output.value+='/'"/>
 
-<input type="button" value="=" OnClick="calc.output.value+=' = '+eval(calc.output.value)"/>
+<input type="button" value="=" OnClick="calc.output.value+=' = '+eval(calc.output.value);"/>
+</center>
+
+</form>
+<br><hr><br>
+<center>
+<h2>Using JS File </h2>
+<form name="calc2" role="form">
+<input type="text" name="output2"/><br><br>
+
+<input type="button" value="7" OnClick="calc2.output2.value+='7'"/>
+<input type="button" value="8" OnClick="calc2.output2.value+='8'"/>
+<input type="button" value="9" OnClick="calc2.output2.value+='9'"/><br>
+<input type="button" value="4" OnClick="calc2.output2.value+='4'"/>
+<input type="button" value="5" OnClick="calc2.output2.value+='5'"/>
+<input type="button" value="6" OnClick="calc2.output2.value+='6'"/><br>
+<input type="button" value="1" OnClick="calc2.output2.value+='1'"/>
+<input type="button" value="2" OnClick="calc2.output2.value+='2'"/>
+<input type="button" value="3" OnClick="calc2.output2.value+='3'"/><br><br>
+<input type="button" value="0" OnClick="calc2.output2.value+='0'"/>
+
+<input type="button" value="C" OnClick="calci('C');"/>
+
+<input type="button" value="+" OnClick="calci('+');"/>
+<input type="button" value="-" OnClick="calci('-');"/>
+<input type="button" value="*" OnClick="calci('*');"/>
+<input type="button" value="/" OnClick="calci('/');"/>
+
+<input type="button" value="=" OnClick="calci('=');"/>
 </center>
 
 </form>
